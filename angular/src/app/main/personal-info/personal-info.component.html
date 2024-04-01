@@ -1,0 +1,40 @@
+<div [@routerTransition]>
+    <div class="kt-content  kt-grid__item kt-grid__item--fluid kt-grid kt-grid--hor">
+        <div class="kt-subheader kt-grid__item">
+            <div class="kt-container ">
+                <div class="kt-subheader__main">
+                    <h3 class="kt-subheader__title">
+                        <div class="bg mx-5 p-3 text-white">Thông tin</div>                        
+                    </h3>
+                </div>
+            </div>
+        </div>
+        <div class="kt-container kt-grid__item kt-grid__item--fluid">
+            <div class="kt-portlet kt-portlet--mobile">
+                <div class="kt-portlet__body  kt-portlet__body--fit">
+                    <div *ngFor="let student of students">
+                        <div class="row kt-row--no-padding m-5">
+                            <div class="col">
+                                <img width="300" src="https://i1-vnexpress.vnecdn.net/2021/07/28/dong-nai-2752-1627464677.jpg?w=1020&h=0&q=100&dpr=1&fit=crop&s=9ZWtxixtsak2aYxzCXpbbg" alt="">
+                            </div>
+                            <div class="col">
+                                <h3 class="text-info mx-2 my-4">Thông tin học vụ</h3>
+                                <h4 class="m-2">{{'Mã học viên : ' + student.studentId}}</h4>
+                                <h4 class="m-2">{{'Cấp đai : ' + student.level}}</h4>
+                                <h4 class="m-2">{{'Lớp võ : ' + student.class}}</h4>
+                                <h4 class="m-2">Trạng thái : đang học</h4>
+                            </div>
+                            <div class="col">
+                                <h3 class="text-info mx-2 my-4">Thông tin cá nhân</h3>
+                                <h4 class="m-2">{{'Tên : ' + student.name}}</h4>
+                                <h4 class="m-2">{{'Năm sinh : 22/08/2003'}}</h4>
+                                <h4 class="m-2">{{'Thông tin liên hệ : ' + student.phoneNumber}}</h4>
+                                <h4 class="m-2">{{'Địa chỉ : ' + student.address}}</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
